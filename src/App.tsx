@@ -1,10 +1,14 @@
 import React from "react";
+import { Provider as TodoProvider } from "context/TodoContext";
+import AddTodo from "components/AddTodo";
+import TodoList from "components/TodoList";
 
 function App() {
   return (
-    <div>
-      <div>홈화면</div>
-    </div>
+    <TodoProvider>
+      <AddTodo />
+      <TodoList />
+    </TodoProvider>
   );
 }
 
